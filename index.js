@@ -13,7 +13,7 @@ const log = function(req, res) {
     console.log(`${req.ip} [${now}] "${req.method} ${req.originalUrl}" - ${res.statusCode}`);
 };
 
-app.get('/check', function (req, res) {
+app.get('/health', function (req, res) {
     res.contentType('application/json');
     res.status(200);
     res.json({status: 'OK'});
